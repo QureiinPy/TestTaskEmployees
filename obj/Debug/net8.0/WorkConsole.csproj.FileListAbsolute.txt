@@ -1,0 +1,14 @@
+E:\Проекты C#\WorkConsole\bin\Debug\net8.0\WorkConsole.exe
+E:\Проекты C#\WorkConsole\bin\Debug\net8.0\WorkConsole.deps.json
+E:\Проекты C#\WorkConsole\bin\Debug\net8.0\WorkConsole.runtimeconfig.json
+E:\Проекты C#\WorkConsole\bin\Debug\net8.0\WorkConsole.dll
+E:\Проекты C#\WorkConsole\bin\Debug\net8.0\WorkConsole.pdb
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.GeneratedMSBuildEditorConfig.editorconfig
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.AssemblyInfoInputs.cache
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.AssemblyInfo.cs
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.csproj.CoreCompileInputs.cache
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.dll
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\refint\WorkConsole.dll
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.pdb
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\WorkConsole.genruntimeconfig.cache
+E:\Проекты C#\WorkConsole\obj\Debug\net8.0\ref\WorkConsole.dll
