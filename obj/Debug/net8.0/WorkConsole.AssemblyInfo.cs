@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f480246eb334f071d8038bfc4da6934ad7e46920")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
