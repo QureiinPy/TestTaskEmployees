@@ -16,18 +16,16 @@ internal class Program
         {
             command = int.Parse(args[0]);
         }
-        switch (command)
+        //Выводит таблицу
+        if (command == 1)
         {
-            case 1:
-                employeeLogic.DisplayEmployees();
-                break;
-            case 2:
-                using (var db = new AppDbContext())
-                {
-                    List<Employee> employees = db.Employees.ToList();
-                }
-                    break;
+            employeeLogic.DisplayEmployees();
+        }
+        //Выводит список сотрудников
+        else if( command == 2)
+        {
 
+            employeeLogic.AddEmployee(args);
         }
     }
 }

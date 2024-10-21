@@ -36,6 +36,7 @@ namespace WorkConsole.DB
 
             builder.Property(x => x.BirthDate)
             .IsRequired()
+            .HasColumnType("timestamp")
             .HasColumnName("BirthDate");
         }
     }

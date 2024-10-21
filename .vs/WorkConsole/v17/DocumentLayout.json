@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\db\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:db\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\db\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:db\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\bll\\employeelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:bll\\employeelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\bll\\employeelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:bll\\employeelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B c#\\workconsole\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F645633-C68C-4123-8E62-FB81B70F81E0}|WorkConsole.csproj|solutionrelative:model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,16 +26,17 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBgAAAAnAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T03:15:58.382Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -56,39 +49,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EmployeeConfiguration.cs",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\DB\\EmployeeConfiguration.cs",
-              "RelativeDocumentMoniker": "DB\\EmployeeConfiguration.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\DB\\EmployeeConfiguration.cs",
-              "RelativeToolTip": "DB\\EmployeeConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T18:54:47.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\DB\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "DB\\AppDbContext.cs",
-              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\DB\\AppDbContext.cs",
-              "RelativeToolTip": "DB\\AppDbContext.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA2wCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T05:36:14.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "EmployeeLogic.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\BLL\\EmployeeLogic.cs",
               "RelativeDocumentMoniker": "BLL\\EmployeeLogic.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\BLL\\EmployeeLogic.cs",
               "RelativeToolTip": "BLL\\EmployeeLogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwC0AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T04:19:34.615Z"
+              "WhenOpened": "2024-10-19T04:19:34.615Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -98,9 +67,10 @@
               "RelativeDocumentMoniker": "Model\\Employee.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B C#\\WorkConsole\\Model\\Employee.cs",
               "RelativeToolTip": "Model\\Employee.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T04:19:11.296Z"
+              "WhenOpened": "2024-10-19T04:19:11.296Z",
+              "EditorCaption": ""
             }
           ]
         }
