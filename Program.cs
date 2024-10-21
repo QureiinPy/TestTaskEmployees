@@ -24,8 +24,12 @@ internal class Program
         //Выводит список сотрудников
         else if( command == 2)
         {
-
             employeeLogic.AddEmployee(args);
+        }
+        else if (command == 3)
+        {
+            //employeeLogic.SortByFullName();
+            employeeLogic.DisplayEmployees(true);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using WorkConsole.DB;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using WorkConsole.DB;
 using WorkConsole.Model;
 
 namespace WorkConsole.BLL
@@ -14,21 +15,42 @@ namespace WorkConsole.BLL
             Console.WriteLine("-------------------------------------------------");
         }
 
-        public void DisplayEmployees()
+        public void DisplayEmployees(bool UniqueEmployees = false)
         {
+            if (!UniqueEmployees)
+            {
             Console.WriteLine("\nСписок сотрудников:");
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("| {0,-20} | {1,-12} | {2,-6} |", "ФИО", "Дата рождения", "Пол");
-            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
+            Console.WriteLine("| Id |          ФИО             |   Дата рождения  |   Пол    |");
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
 
             using (var db = new AppDbContext())
             {
-                foreach (var emp in db.Employees)
+                foreach (var employee in db.Employees)
                 {
-                    Console.WriteLine("| {0,-20} | {1,-12:yyyy-MM-dd} | {2,-6} |", $"{emp.LastName} {emp.FirstName} {emp.SecondName}", emp.BirthDate, emp.Gender);
+                    string FullName = $"{employee.LastName} {employee.FirstName} {employee.SecondName}";
+                    Console.WriteLine($"| {employee.Id,2} | {FullName,-25} | {employee.BirthDate.ToShortDateString(),-13}     | {employee.Gender,-8} |");
                 }
             }
-            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
+            }
+            else
+            {
+                Console.WriteLine("\nСписок сотрудников:");
+                Console.WriteLine("+----+---------------------------+--------------+-----------+");
+                Console.WriteLine("|          ФИО             |   Возраст  |   Пол    |");
+                Console.WriteLine("+----+---------------------------+--------------+-----------+");
+
+                using (var db = new AppDbContext())
+                {
+                    foreach (var employee in SortByFullName())
+                    {
+                        string FullName = $"{employee.LastName} {employee.FirstName} {employee.SecondName}";
+                        Console.WriteLine($"| {FullName,-25} | {CalculateAge(employee.BirthDate),-6}    | {employee.Gender,-8} |");
+                    }
+                }
+                Console.WriteLine("+----+---------------------------+--------------+-----------+");
+            }
         }
 
         public void AddEmployee(string[] args)
@@ -55,8 +77,6 @@ namespace WorkConsole.BLL
                 db.SaveChanges();
                 List<Employee> employees = db.Employees.ToList();
             }
-            int age = CalculateAge(birthDate);
-            Console.WriteLine($"Его возраст {age}");
         }
 
         public int CalculateAge(DateTime birthDate)
@@ -65,6 +85,23 @@ namespace WorkConsole.BLL
             TimeSpan ageSpan = today - birthDate;
             int age = (int)(ageSpan.TotalDays / 365.25);
             return age;
+        }
+
+        public List<Employee> SortByFullName()
+        {
+            List<Employee> uniqueEmployees = new List<Employee>();
+            using (var db = new AppDbContext())
+            {
+                List<Employee> employees = db.Employees.ToList();
+                uniqueEmployees = employees.DistinctBy(e => e.FirstName)
+                    .Distinct()
+                    .ToList();
+            }
+            var sortedList = uniqueEmployees.OrderBy(e => e.LastName)
+                .OrderBy(e => e.FirstName)
+                .OrderBy(e => e.SecondName)
+                .ToList();
+            return sortedList;
         }
     }
 }
