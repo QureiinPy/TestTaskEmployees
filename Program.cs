@@ -7,6 +7,7 @@ internal class Program
     {
         var employee = new Employee();
         var employeeLogic = new EmployeeLogic();
+        var employeeGenerator = new EmployeeGenerator();
         int command = 0;
         if (args.Length == 0)
         {
@@ -28,8 +29,14 @@ internal class Program
         }
         else if (command == 3)
         {
-            //employeeLogic.SortByFullName();
             employeeLogic.DisplayEmployees(true);
+        }
+        else if (command == 4)
+        {
+            List<Employee> generatedEmployees = new List<Employee>();
+            generatedEmployees.AddRange(employeeGenerator.GenerateEmployees(1000000));
+            generatedEmployees.AddRange(employeeGenerator.GenerateSpecificEmployees(100));
+            employeeGenerator.SendToDatabase(generatedEmployees);
         }
     }
 }

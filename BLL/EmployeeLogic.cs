@@ -15,9 +15,9 @@ namespace WorkConsole.BLL
             Console.WriteLine("-------------------------------------------------");
         }
 
-        public void DisplayEmployees(bool UniqueEmployees = false)
+        public void DisplayEmployees(bool SortedUniqueEmployees = false)
         {
-            if (!UniqueEmployees)
+            if (!SortedUniqueEmployees)
             {
             Console.WriteLine("\nСписок сотрудников:");
             Console.WriteLine("+----+---------------------------+--------------+-----------+");
