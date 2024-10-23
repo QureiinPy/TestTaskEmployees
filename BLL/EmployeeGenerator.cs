@@ -9,7 +9,7 @@ namespace WorkConsole.BLL
         private static readonly Random random = new Random();
         private static readonly string[] maleFirstNames = { "Alex", "John", "Michael", "Frank", "David" };
         private static readonly string[] femaleFirstNames = { "Anna", "Maria", "Julia", "Fiona", "Diana" };
-        private static readonly string[] secondNames = { "Ivanov", "Petrov", "Sidorov", "Fedorov" };
+        private static readonly string[] secondNames = { "Ivanov", "Petrov", "Sidorov", "Fedorov", "Franke" };
         private static readonly string[] lastNames = { "Sergeevich", "Aleksandrovich", "Egorovich" };
 
         //Автоматическое создание списка сотрудников
@@ -45,7 +45,8 @@ namespace WorkConsole.BLL
             {
                 Gender gender = Gender.Male;
                 string firstName = maleFirstNames[random.Next(maleFirstNames.Length)];
-                string secondName = "Franke";
+                string[] secondNamesStartF = secondNames.Where(x => x.StartsWith('F')).ToArray();
+                string secondName = secondNamesStartF[random.Next(secondNamesStartF.Length)];
                 string lastName = lastNames[random.Next(lastNames.Length)];
 
                 employees.Add(new Employee
@@ -60,13 +61,13 @@ namespace WorkConsole.BLL
             return employees;
         }
 
-        public void SendToDatabase(List<Employee> employees)
+        public async Task SendToDatabaseAsync(List<Employee> employees)
         {
             //Пакетная отправка списка в БД
             using (var db = new AppDbContext())
             {
-                db.Employees.AddRange(employees);
-                db.SaveChanges();
+                await db.Employees.AddRangeAsync(employees);
+                await db.SaveChangesAsync();
             }
         }
     }

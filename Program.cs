@@ -1,6 +1,7 @@
 ﻿using WorkConsole.Model;
 using WorkConsole.BLL;
 using WorkConsole.DB;
+using System.Diagnostics;
 internal class Program
 {
     public static void Main(string[] args)
@@ -36,7 +37,26 @@ internal class Program
             List<Employee> generatedEmployees = new List<Employee>();
             generatedEmployees.AddRange(employeeGenerator.GenerateEmployees(1000000));
             generatedEmployees.AddRange(employeeGenerator.GenerateSpecificEmployees(100));
-            employeeGenerator.SendToDatabase(generatedEmployees);
+            employeeGenerator.SendToDatabaseAsync(generatedEmployees);
+        }
+        else if(command == 5)
+        {
+            
+            using (var db = new AppDbContext())
+            {
+                List<Employee> employeesList = new List<Employee>();
+                employeesList = db.Employees.ToList();
+                Stopwatch sw = Stopwatch.StartNew();
+
+                employeeLogic.DisplaySpecificEmployees(employeesList.Where(x => x.Gender == Gender.Male)
+                    .Where(x => x.SecondName.StartsWith('F'))
+                    .Take(100)
+                    .ToList());
+                sw.Stop();
+                
+                Console.WriteLine($"Время: {sw.Elapsed}"); // 0.019 
+            }
+            
         }
     }
 }

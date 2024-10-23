@@ -15,6 +15,20 @@ namespace WorkConsole.BLL
             Console.WriteLine("-------------------------------------------------");
         }
 
+        public void DisplaySpecificEmployees(List<Employee> employees)
+        {
+            Console.WriteLine("\nСписок сотрудников:");
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
+            Console.WriteLine("| Id |          ФИО             |   Дата рождения  |   Пол    |");
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
+            foreach (var employee in employees)
+            {
+                string FullName = $"{employee.LastName} {employee.FirstName} {employee.SecondName}";
+                Console.WriteLine($"| {employee.Id,2} | {FullName,-25} | {employee.BirthDate.ToShortDateString(),-13}     | {employee.Gender,-8} |");
+            }
+            Console.WriteLine("+----+---------------------------+--------------+-----------+");
+        }
+
         public void DisplayEmployees(bool SortedUniqueEmployees = false)
         {
             if (!SortedUniqueEmployees)
